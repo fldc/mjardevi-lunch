@@ -1,6 +1,6 @@
 # Mjärdevi Lunch Skill
 
-AI-skill for [OpenCode](https://opencode.ai) och [Claude Code](https://docs.anthropic.com/en/docs/claude-code) som hämtar dagens lunchmeny från alla restauranger i Mjärdevi, Linköping via [Luncha I Mjärdevi API](https://lunchaimjardevi.com/api/).
+AI-skill för [OpenCode](https://opencode.ai) och [Claude Code](https://docs.anthropic.com/en/docs/claude-code) som hämtar dagens lunchmeny från alla restauranger i Mjärdevi, Linköping via [Luncha I Mjärdevi API](https://lunchaimjardevi.com/api/).
 
 Fråga din AI-assistent om lunch i Mjärdevi så triggas skillen automatiskt, t.ex:
 - "Vad finns för lunch idag?"
