@@ -1,38 +1,41 @@
 # Mjärdevi Lunch Skill
 
-Hämtar dagens lunchmeny från alla restauranger i Mjärdevi via Luncha I Mjärdevi API.
+AI-skill for [OpenCode](https://opencode.ai) och [Claude Code](https://docs.anthropic.com/en/docs/claude-code) som hämtar dagens lunchmeny från alla restauranger i Mjärdevi, Linköping via [Luncha I Mjärdevi API](https://lunchaimjardevi.com/api/).
+
+Fråga din AI-assistent om lunch i Mjärdevi så triggas skillen automatiskt, t.ex:
+- "Vad finns för lunch idag?"
+- "Dagens lunch Mjärdevi"
+- "Var kan man äta lunch?"
 
 ## Installation
 
-1. Skaffa API-nyckel på https://lunchaimjardevi.com/api/
+1. Klona repot till din skill-katalog:
 
-2. Skapa `.api_key` fil:
-```bash
-echo "din_api_nyckel" > .api_key
-```
+   **OpenCode:**
+   ```bash
+   git clone <repo-url> ~/.config/opencode/skill/mjardevi-lunch
+   ```
 
-3. Kör scriptet:
-```bash
-python scripts/get_lunch.py
-```
+   **Claude Code:**
+   ```bash
+   git clone <repo-url> ~/.claude/skill/mjardevi-lunch
+   ```
 
-## Användning
+2. Skaffa en API-nyckel på https://lunchaimjardevi.com/api/
 
-```bash
-# Använd API-nyckel från .api_key fil
-python scripts/get_lunch.py
+3. Skapa `.api_key` i skill-katalogen:
+   ```bash
+   echo "din_api_nyckel" > .api_key
+   ```
 
-# Ange API-nyckel direkt
-python scripts/get_lunch.py din_api_nyckel
+## Hur det fungerar
 
-# JSON-format
-python scripts/get_lunch.py din_api_nyckel json
-```
+När du frågar om lunch i Mjärdevi identifierar AI-assistenten att skillen ska användas via `SKILL.md`. Assistenten kör sedan `scripts/get_lunch.py` som hämtar dagens menyer från API:et och presenterar resultatet i chatten.
 
 ## Filer
 
-- `SKILL.md` - Skill-dokumentation
-- `scripts/get_lunch.py` - Huvudscript
+- `SKILL.md` - Skill-definition med triggers och instruktioner
+- `scripts/get_lunch.py` - Script som hämtar menyer via API:et
 - `references/api.md` - API-dokumentation
-- `.gitignore` - Exkluderar .api_key
 - `.api_key.example` - Mall för API-nyckel
+- `.gitignore` - Exkluderar `.api_key` från versionshantering
