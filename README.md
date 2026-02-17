@@ -13,12 +13,12 @@ Fråga din AI-assistent om lunch i Mjärdevi så triggas skillen automatiskt, t.
 
    **OpenCode:**
    ```bash
-   git clone <repo-url> ~/.config/opencode/skill/mjardevi-lunch
+   git clone https://github.com/fldc/mjardevi-lunch ~/.config/opencode/skill/mjardevi-lunch
    ```
 
    **Claude Code:**
    ```bash
-   git clone <repo-url> ~/.claude/skill/mjardevi-lunch
+   git clone https://github.com/fldc/mjardevi-lunch ~/.claude/skill/mjardevi-lunch
    ```
 
 2. Skaffa en API-nyckel på https://lunchaimjardevi.com/api/
